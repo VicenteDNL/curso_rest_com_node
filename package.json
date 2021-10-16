@@ -1,0 +1,29 @@
+{
+  "name": "projeto-nodejs-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VicenteDNL/curso_rest_com_node.git"
+  },
+  "author": "Danilo S Vicente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VicenteDNL/curso_rest_com_node/issues"
+  },
+  "homepage": "https://github.com/VicenteDNL/curso_rest_com_node#readme",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
