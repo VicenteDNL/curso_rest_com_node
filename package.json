@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/VicenteDNL/curso_rest_com_node#readme",
   "dependencies": {
+    "axios": "^0.23.0",
     "body-parse": "^0.1.0",
     "consign": "^0.1.6",
     "express": "^4.17.1",

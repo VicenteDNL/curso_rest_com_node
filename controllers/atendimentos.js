@@ -15,7 +15,9 @@ module.exports = app =>{
     })
     app.post('/atendimentos', (req, res)=>{
         const atendimento =req.body
-        Atendimento.adiciona(atendimento, res)
+        Atendimento.adiciona(atendimento)
+        .then(atendimentoCadastrado=>res.status(201).json(atendimentoCadastrado))
+        .catch(erros=> res.status(404).json(erros))
     })
     app.delete('/atendimentos/:id',(req, res)=>{
         const id = parseInt(req.params.id)
