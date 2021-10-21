@@ -6,116 +6,152 @@
 	},
 	"item": [
 		{
-			"name": "Criar Atendimento",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"cliente\":\"Danilo Saraiva Vicente 2\",\r\n    \"pet\": \"Akira\",\r\n    \"servico\": \"Banho\",\r\n    \"status\": \"Agendado\",\r\n    \"observacoes\": \"Raivosa\",\r\n    \"data\": \"19/10/2021\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Atendimento",
+			"item": [
+				{
+					"name": "Criar Atendimento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\":\"10020030010\",\r\n    \"pet\": \"Akira\",\r\n    \"servico\": \"Banho\",\r\n    \"status\": \"Agendado\",\r\n    \"observacoes\": \"Raivosa\",\r\n    \"data\": \"19/10/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/atendimentos",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"atendimentos"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{url_api}}/atendimentos",
-					"host": [
-						"{{url_api}}"
-					],
-					"path": [
-						"atendimentos"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Atendimentos",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url_api}}/atendimentos",
-					"host": [
-						"{{url_api}}"
-					],
-					"path": [
-						"atendimentos"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Buscar Atendimento",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url_api}}/atendimentos/16",
-					"host": [
-						"{{url_api}}"
-					],
-					"path": [
-						"atendimentos",
-						"16"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Alterar Atendimento",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"cliente\": \"Danilo Saraiva Vicente 61\",\r\n    \"data\": \"20/10/2021\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Listar Atendimentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/atendimentos",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"atendimentos"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{url_api}}/atendimentos/16",
-					"host": [
-						"{{url_api}}"
-					],
-					"path": [
-						"atendimentos",
-						"16"
-					]
+				{
+					"name": "Buscar Atendimento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/atendimentos/19",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"atendimentos",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Atendimento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/atendimentos/16",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"atendimentos",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Atendimento",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": \"Danilo Saraiva Vicente 61\",\r\n    \"data\": \"20/10/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/atendimentos/16",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"atendimentos",
+								"16"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Excluir Atendimento",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{url_api}}/atendimentos/16",
-					"host": [
-						"{{url_api}}"
-					],
-					"path": [
-						"atendimentos",
-						"16"
-					]
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Caladao\",\r\n    \"imagem\": \"./assets/dog.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/pet",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
